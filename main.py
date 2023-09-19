@@ -1,20 +1,20 @@
-from print_file import print_fn as pf
-from linear_search_file import linear_search_fn as lisf
-from binary_search_file import binary_search_fn as bisf
-from bubble_sort_file import bubble_sort_fn as busf
-from insertion_sort_file import insertion_sort_fn as insf
+from base import put_message as pm
+from search import linear_search as lisf
+from search import binary_search as bisf
+from sort import bubble_sort as busf
+from sort import insertion_sort as insf
 
 def main_0():
-    result = pf("Hello from main.py")
+    result = pm("Text can go here.")
     print(result)
     
 def main_1():
-    example_target_element = 42
-    result = lisf(list_file, example_target_element)
+    target_element = 42
+    result = lisf(list_file, target_element)
     if result != -1:
-        print(f"Linear Search Result: Element {example_target_element} found at index {result}.")
+        print(f"Linear Search Result: Element {target_element} found at index {result}.")
     else:
-        print(f"Linear Search Result: Element {example_target_element} not found in the list.")
+        print(f"Linear Search Result: Element {target_element} not found in the list.")
 
 def main_2():
     target_element = 64

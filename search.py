@@ -1,4 +1,4 @@
-def binary_search_fn(file_path, target_element):
+def binary_search(file_path, target_element):
     with open(file_path, 'r') as file:
         input_list = [int(line.strip()) for line in file]
 
@@ -14,4 +14,13 @@ def binary_search_fn(file_path, target_element):
         else:
             right = mid - 1
 
+    return -1
+
+def linear_search(file_path, target_element):
+    with open(file_path, 'r') as file:
+        input_list = [int(line.strip()) for line in file]
+    
+    for index, element in enumerate(input_list):
+        if element == target_element:
+            return index
     return -1
