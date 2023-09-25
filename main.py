@@ -1,12 +1,13 @@
-from base import log
-import algo
+from base import logMessage
+from search import binarySearch, linearSearch
+from sort import bubbleSort, heapSort, insertionSort, mergeSort, quickSort, selectionSort
 
 def test_0():
-    log("This is a log message.")
-    
+    logMessage("This is a log message.")
+
 def test_1():
     target_element = 42
-    result = algo.linear_search(list_file, target_element)
+    result = linearSearch(list_file, target_element)
     if result != -1:
         print(f"Linear Search Result: Element {target_element} found at index {result}.")
     else:
@@ -14,42 +15,42 @@ def test_1():
 
 def test_2():
     target_element = 64
-    result = algo.binary_search(list_file, target_element)
+    result = binarySearch(list_file, target_element)
     if result != -1:
         print(f"Binary Search Result: Element {target_element} found at index {result}.")
     else:
         print(f"Binary Search Result: Element {target_element} not found in the list.")
 
 def test_3():
-    bubble_sorted_list = algo.bubble_sort(list_file)
+    bubble_sorted_list = bubbleSort(list_file)
     print("Bubble Sorted List:", bubble_sorted_list)
 
 def test_4():
-    insertion_sorted_list = algo.insertion_sort(list_file)
+    insertion_sorted_list = insertionSort(list_file)
     print("Insertion Sorted List:", insertion_sorted_list)
 
 def test_5():
     with open(list_file, 'r') as file:
         numbers = [int(line.strip()) for line in file]
-    algo.quick_sort(numbers)
+    quickSort(numbers)
     print("Quick Sorted List:", numbers)
 
 def test_6():
     with open(list_file, 'r') as file:
         numbers = [int(line.strip()) for line in file]
-    merge_sorted_list = algo.merge_sort(numbers)
+    merge_sorted_list = mergeSort(numbers)
     print("Merge Sorted List:", merge_sorted_list)
 
 def test_7():
     with open(list_file, 'r') as file:
         numbers = [int(line.strip()) for line in file]
-    algo.selection_sort(numbers)
+    selectionSort(numbers)
     print("Selection Sorted List:", numbers)
 
 def test_8():
     with open(list_file, 'r') as file:
         numbers = [int(line.strip()) for line in file]
-    algo.heap_sort(numbers)
+    heapSort(numbers)
     print("Heap Sorted List:", numbers)
 
 if __name__ == "__main__":
@@ -63,3 +64,4 @@ if __name__ == "__main__":
     test_6()
     test_7()
     test_8()
+    test_0()
