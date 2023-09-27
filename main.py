@@ -1,10 +1,4 @@
-from base import logMessage
-from merge import iterativeMerge, mergeSortedLists
-from search import binarySearch, linearSearch
-from sort import bubbleSort, heapSort, insertionSort, mergeSort, quickSort, selectionSort
-
-def exampleUsage_00():
-    logMessage("This is a log message.")
+from lib import *
 
 def exampleUsage_01():
     sorted_lists = [
@@ -14,7 +8,7 @@ def exampleUsage_01():
     ]
     list_file = mergeSortedLists(sorted_lists)
     print("Parallel Merge List:", list_file)
-    file_path = "list.txt"
+    file_path = "./dataset/example_list.txt"
     with open(file_path, "w") as file:
         for item in list_file:
             file.write(str(item) + "\n")
@@ -74,8 +68,8 @@ def exampleUsage_10():
     print("Iterative Merge List:", merged_list)
 
 if __name__ == "__main__":
-    list_file = 'list.txt'
-    exampleUsage_00()
+    logMessage("START")
+    list_file = './dataset/example_list.txt'
     exampleUsage_01()
     exampleUsage_02()
     exampleUsage_03()
@@ -86,4 +80,4 @@ if __name__ == "__main__":
     exampleUsage_08()
     exampleUsage_09()
     exampleUsage_10()
-    exampleUsage_00()
+    logMessage("STOP")
