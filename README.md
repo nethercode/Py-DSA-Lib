@@ -1,6 +1,9 @@
 # [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) [Data Structures](https://en.wikipedia.org/wiki/Data_structure) and [Algorithms](https://en.wikipedia.org/wiki/Algorithm) [Library](https://en.wikipedia.org/wiki/Library_(computing))
 *(Work-in-Progress)*
 
+<u>Graph
+- [Dijkstra's](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+
 <u>[Search](https://en.wikipedia.org/wiki/Search_algorithm)</u>
 - [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 - [Linear Search](https://en.wikipedia.org/wiki/Linear_search)

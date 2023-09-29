@@ -49,7 +49,7 @@ with open(csv_file_path, 'r') as csv_file:
     # Initialize a counter to track the number of rows inserted
     num_rows_inserted = 0
 
-    # Read and insert data, including the first 10 data lines
+    # Read and insert data
     for row in csv_reader:
         insert_sql = f'''
         INSERT INTO {table_name} ({", ".join(sanitized_headers)})
@@ -60,7 +60,7 @@ with open(csv_file_path, 'r') as csv_file:
         num_rows_inserted += 1
         
         if num_rows_inserted >= populated_row_count:
-            break  # Exit the loop after inserting the first 10 rows
+            break  # Exit the loop
     
     # Commit changes and close connection
     conn.commit()

@@ -1,5 +1,7 @@
 from .base.log import *
 
+from .graph.dijkstra import *
+
 from .merge.iterative_merge import *
 from .merge.parallel_merge import *
 

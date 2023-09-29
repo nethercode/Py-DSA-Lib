@@ -69,6 +69,20 @@ def exampleUsage_10():
     merged_list = iterativeMerge(list1, list2)
     # print("Iterative Merge List:", merged_list)
 
+def exampleUsage_11():
+    graph = {
+        'A': {'B': 1, 'C': 4},
+        'B': {'A': 1, 'C': 2, 'D': 5},
+        'C': {'A': 4, 'B': 2, 'D': 1},
+        'D': {'B': 5, 'C': 1}
+    }
+    
+    start_node = 'A'
+    distances = dijkstra(graph, start_node)
+    
+    for node, distance in distances.items():
+        print(f'Shortest distance from {start_node} to {node}: {distance}')
+
 if __name__ == "__main__":
     logMessage("START")
     list_file = './dataset/output.txt'
@@ -82,4 +96,5 @@ if __name__ == "__main__":
     exampleUsage_08()
     exampleUsage_09()
     exampleUsage_10()
+    exampleUsage_11()
     logMessage("STOP")

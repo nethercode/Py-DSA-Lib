@@ -3,17 +3,12 @@
 
 ### Working with SQLite3 CLI
 
-Open a database
-`$ sqlite3 example.db`
+Open a database `$ sqlite3 example.db`
 
-Exit a database
-`sqlite> .exit`
+Exit a database `sqlite> .exit`
 
-Check database tables
-`sqlite> .tables`
+Check database tables `sqlite> .tables`
 
-Check table schema (column headers)
-`sqlite> PRAGMA table_info(table_name);`
+Check table schema (column headers) `sqlite> PRAGMA table_info(table_name);`
 
-Check table contents
-`SELECT * FROM table_name`
+Check table contents `sqlite> SELECT * FROM table_name`
